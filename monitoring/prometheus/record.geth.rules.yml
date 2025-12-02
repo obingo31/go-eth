@@ -1,0 +1,10 @@
+groups:
+  - name: geth_recording_rules
+    interval: 30s
+    rules:
+      - record: job:geth_peers:avg1m
+        expr: avg_over_time(geth_peers[1m])
+      - record: job:geth_sync_lag:latest
+        expr: max(geth_blockchain_head_block - geth_blockchain_header_block)
+      - record: job:geth_txpool_pending:avg1m
+        expr: avg_over_time(geth_txpool_pending[1m])
