@@ -1,0 +1,14 @@
+# Local credentials and keystores
+keystore/
+keystore-import/
+tmp/
+
+# Environment configuration
+.env
+.env.*
+*.key
+*.pem
+*.pw
+
+# Tooling caches / dependencies
+node_modules/
